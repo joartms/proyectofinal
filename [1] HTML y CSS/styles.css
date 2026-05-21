@@ -1,0 +1,130 @@
+:root{
+    --espuma: #fff7e8;
+    --crema: #cfab71;
+    --tostado: #7f5e35;
+    --espresso: #713105;
+    --cafe: #4f351c;
+    --oscuro: #341100;
+    font-family: Segoe UI;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+
+} */
+body, h1, h2, h3, h4, h5, h6, li, a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: var(--espresso);
+    display: flex;
+    justify-content: space-between;
+    padding:  5px 50px;
+    align-items: center;
+    box-shadow: 20px 20px 30px 10px #fff;
+    z-index:10;
+}
+.lista{
+    display:flex;
+    gap: 90px;
+}
+.item{
+    color: var(--crema);
+    font-size: 17px;
+}
+.item:hover{
+    color: var(--espuma);
+}
+
+.logo {
+    align-items: center;
+    width: 100px;
+    border-radius: 50%;
+    transition: image ;
+}
+
+/* MAIN */
+
+.contenedor-izquierdo {
+    width: 100%;
+}
+
+.cont-izquierdo-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.contenedor-derecho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal{
+    background-image: url(imagenfondo.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 90vh;
+    position: relative;
+}
+
+.black-background{
+    background-color:#0005;
+    width:100%;
+    display: flex;
+    height: 90vh;
+}
+
+.login {
+    background: linear-gradient(var(--espuma),var(--crema));
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #202020;
+    width: 500px;
+    padding: 20px;
+}
+
+.titulo-login {
+    text-align: center;
+    margin: 0;
+}
+
+.input-celda {
+    border-radius: 7px;
+    font-size: 15px;
+    height: 25px;
+    width:100%;
+    margin-top: 4px;
+    margin-bottom: 11px;
+    border: none;
+}
+
+.contenedor-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.enviar {
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    color: var(--espuma);
+    font-weight: bold;
+    border-radius: 7px;
+    border:none;
+    background-color: var(--tostado);
+    box-shadow:2px 1px 7px 3px #4f351c66;
+}
+
+
+
+
