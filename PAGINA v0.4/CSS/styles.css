@@ -1,0 +1,138 @@
+/* MAIN */
+
+.contenedor-izquierdo {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.cont-izquierdo-2{
+    color: var(--espuma);
+}
+
+.subtitulo{
+    font-family: "Instrument Serif", serif;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 5px;
+    font-size: 70px;
+    line-height: 70px;
+    text-shadow: 2px 2px 5px var(--cafe);
+}
+
+.parra{
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.contenedor-derecho {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal{
+    background-image: url(../IMG/imagenfondo.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.black-background{
+    background: radial-gradient(transparent, #341100aa);
+    width:100%;
+    display: flex;
+    height: 100vh;
+}
+
+.login {
+    background: linear-gradient(#cfab7155 , #cfab71aa);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #202020;
+    width: 500px;
+    padding: 20px;
+}   
+
+.titulo-login {
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1.5px;
+    color: var(--espuma);
+}
+
+.input-celda {
+    border-radius: 7px;
+    font-size: 15px;
+    height: 25px;
+    width:100%;
+    margin-top: 4px;
+    margin-bottom: 11px;
+    border: none;
+    color: var(--oscuro);
+    background-color: var(--espuma);
+}
+
+.label-inicio{
+    color: var(--espuma);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inputs{
+    margin-top: 10px;
+}
+
+.contenedor-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.enviar {
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    color: var(--espuma);
+    font-weight: bold;
+    border-radius: 7px;
+    border:none;
+    background-color: var(--cafe);
+    box-shadow:2px 1px 7px 3px #4f351c66;
+    transition: background-color 0.2s ease;
+}
+
+.enviar:hover{
+    background-color: var(--espresso);
+}
+
+.papel{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+/* PRODUCTOS */
+
+aside{
+    background-color: var(--cafe);
+    height: 400px;
+    margin: 0;
+    padding: 40px;
+}
+
+.titulo-productos{
+    display:flex;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    color: var(--espuma);
+}
+
