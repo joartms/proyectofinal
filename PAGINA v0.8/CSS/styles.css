@@ -1,0 +1,330 @@
+/* MAIN */
+
+.contenedor-izquierdo {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.cont-izquierdo-2{
+    color: var(--espuma);
+}
+
+.subtitulo{
+    font-family: "Instrument Serif", serif;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 5px;
+    font-size: 70px;
+    line-height: 70px;
+    text-shadow: 2px 2px 5px var(--cafe);
+}
+
+.parra{
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.contenedor-derecho {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal{
+    background-image: url(../IMG/imagenfondo.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.black-background{
+    background: radial-gradient(transparent, #341100aa);
+    width:100%;
+    display: flex;
+    height: 100vh;
+}
+
+.login {
+    background: linear-gradient(#cfab7155 , #cfab71aa);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #202020;
+    width: 500px;
+    padding: 20px;
+}   
+
+.titulo-login {
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1.5px;
+    color: var(--espuma);
+}
+
+.input-celda {
+    border-radius: 7px;
+    font-size: 15px;
+    height: 25px;
+    width: 98%;
+    margin-top: 4px;
+    margin-bottom: 11px;
+    border: none;
+    color: var(--oscuro);
+    background-color: var(--espuma);
+    padding-left: 10px;
+}
+
+.label-inicio{
+    color: var(--espuma);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.inputs{
+    margin-top: 10px;
+}
+
+.contenedor-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.enviar {
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    color: var(--espuma);
+    font-weight: bold;
+    border-radius: 7px;
+    border:none;
+    background-color: var(--cafe);
+    box-shadow:2px 1px 7px 3px #4f351c66;
+    transition: background-color 0.2s ease;
+}
+
+.enviar:hover{
+    background-color: var(--espresso);
+}
+
+.papel{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+
+/* SECCION DEL CARRUSEL */
+
+/* MIRÁ NUESTROS PRODUCTOS*/
+.titulo-seccion-carrusel {
+    text-align: center;
+    margin: 50px 0px;
+    color: var(--espuma);
+}
+.seccion-carrusel {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cafe);
+    height: 100%x;
+    padding-bottom: 120px;
+    margin: 0;
+}
+
+
+/* CARRUSEL */
+.carrusel {
+    width: fit-content;
+    margin: auto;
+    /* border: 1px solid #000; */
+    gap: 50px;
+    display: flex;
+}
+
+
+/* BOTON IZQUIERDO */
+.contenedor-boton-izquierdo{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #000; */
+    width: 50px;
+    max-height: 250px;
+    border-radius: 10px;
+    /* background-color: blue; */
+}
+.boton-izquierdo {
+    width: 50px;
+    height: 110px;
+    border: none;
+    background-color: darkgray;
+    color: black;
+    font-size: 30px;
+    border-radius: 10px;   
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+    transition: background-color 0.5s ease;
+}
+.boton-izquierdo:hover {
+    background-color: gray;
+}
+.boton-izquierdo:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: darkgrey;
+}
+
+
+/* BOTON DERECHO */
+.contenedor-boton-derecho{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #000; */
+    width: 50px;
+    max-height: 250px;
+    border-radius: 10px;
+    /* background-color: blue; */
+}
+.boton-derecho {
+    width: 50px;
+    height: 110px;
+    border: none;
+    background-color: darkgray;
+    color: black;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+    transition: background-color 0.5s ease;
+}
+.boton-derecho:hover {
+    background-color: gray;
+}
+.boton-derecho:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: darkgrey;
+}
+
+
+/* CONTENEDOR CENTRAL */
+.contenedor-central {
+    /* background-color: blue; */
+    width: 900px; /* ORIGINALMENTE ES 870px*/
+    overflow: hidden;
+}
+
+
+/* CONTENEDOR PRODUCTOS */
+.contenedor-productos {
+    /* background-color: green; */
+    display: flex;
+    gap: 60px; /*SI SACO ESTA LÍNEA, SE EMPIEZA A VER PARTE DEL PRODUCTO 4*/
+    transition: transform 0.4s ease;
+    padding: 15px 15px;
+}
+
+
+/* PRODUCTOS */
+.producto {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    box-shadow: 0px 0px 10px 0px var(--espuma);
+}
+.producto-img {
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+    padding: 0;
+}
+.producto-h3 {
+    margin: 0;
+    padding: 10px 0px;
+    text-align: center;
+}
+.producto-p {
+    max-width: 250px;
+    white-space: normal;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+
+/* NUESTRA HISTORIA */
+
+/* CONTENEDOR GENERAL */
+.contenedor-mirar {
+    display: flex;
+}
+/* IMAEGN */
+.contenedor-mirar-izquierdo {
+    width: 50%;
+    border: 2px solid red;
+    background-color: yellow;
+}
+.imagen-mirar-izquierdo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-izquierda {
+    padding: 60px 0px;
+    height: 250px;
+    width: 480px;
+}
+
+/* HISTORIA */
+.contenedor-mirar-derecho {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 2px solid blue;
+    background-color: green;
+}
+.nuestra-historia-h2 {
+    padding-top: 60px;
+    padding-left: 25px;
+}
+.nuestra-historia-p {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* CARRUSEL NO INTERACTIVO */
+.carrusel-no-interactivo {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.carrusel-central-no-interactivo {
+    display: flex;
+    
+}
+.contenedor-fotos {
+    display: flex;
+    gap: 40px;
+}
+.foto-n {
+    
+}
+.foto-1 {
+    display: flex;
+    height: 400px;
+    width: 400px;
+}
