@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia</title>
+
+    <!-- STYLES -->
+
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+    <link rel="stylesheet" href="../CSS/catalogo.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="png" href="../IMG/favicon.png">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- HEADER -->
+
+    <header>
+        <div class="header">
+            <div class="lado-izquierdo">
+                <div class="nombre">
+                    <img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo">
+                </div>
+                <div class="buscador">
+                    <input type="text" class="lupita" placeholder="Búsqueda...">
+                    <img src="../IMG/lupita-icon.png" alt="">
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="lista">
+                    <li><a class="item" href="">Sobre Nosotros</a></li>
+                    <li><a class="item" href="">Productos</a></li>
+                    <li><a class="item" href="">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="black-background">
+
+                <!-- CARRUSEL DE PUBLICIDAD -->
+
+                <div class="caja-carrusel">
+                    <div class="carrusel">
+                        <div class="slides" id="slides">
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-1.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-2.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-3.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-4.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-5.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <button class="prev" onclick="prevSlide()">❮</button>
+                        <button class="next" onclick="nextSlide()">❯</button>
+                    </div>
+                    <div class="gradiente"></div>   
+                </div>
+
+                <!-- <div class="titulo">
+                    <h1>Catálogo</h1>
+                </div>
+                <div class="categoria-1">
+                    <h3 class="titulo-categorias">Categoría 1</h3>
+                </div>
+                <div class="categoria-2">
+                    <h3 class="titulo-categorias">Categoría 1</h3>
+                </div>
+                <div class="categoria-3">
+                    <h3 class="titulo-categorias">Categoría 1</h3>
+                </div>
+                <div class="categoria-4">
+                    <h3 class="titulo-categorias">Categoría 1</h3>
+                </div>
+                <div class="categoria-5">
+                    <h3 class="titulo-categorias">Categoría 1</h3>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="columnas">
+            <div>
+                <h4 class="subtitulo-footer">Contacto</h4>
+                <div class="gmail">
+                    <img class="footer-icon" src="../IMG/gmail-icon.png" alt="icono de gmail">
+                    <div>
+                        <h5>Gmail:</h5>
+                        <h6>email@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="telefono">
+                    <img class="footer-icon" src="../IMG/telefono-icon.png" alt="icono de telefono">
+                    <div>
+                        <h5>Teléfono:</h5>
+                        <h6>+5493364010101</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="subtitulo-footer">Síguenos en<br>nuestras redes!</h4>
+                <div class="instagram">
+                    <img class="footer-icon" src="../IMG/instagram-icon.png" alt="icono de instagram">
+                    <div>
+                        <h5>Instagram:</h5>
+                        <h6>instagram.user</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frase-final">
+            <div>
+                <h4 class="delicia">Delicia</h4>
+                <h5>Gente que hornea contenta.</h5>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DEL CARRUSEL DE INICIO -->
+
+    <script>
+
+        // Variable que almacena el índice (posición) de la imagen actual.
+        // Comienza en 0 porque el carrusel inicia mostrando la primera imagen.
+        let index = 0;
+
+        // Obtiene el contenedor que agrupa todas las imágenes del carrusel.
+        const slides = document.getElementById("slides");
+
+        // Busca todos los elementos con la clase "slide"
+        // y guarda cuántos hay en total.
+        const totalSlides = document.querySelectorAll(".slide").length;
+
+        // Función encargada de mostrar la imagen correspondiente al índice actual.
+        function showSlide(){
+            // Mueve horizontalmente el contenedor de imágenes.
+            // Si index = 0 → muestra la primera imagen.
+            // Si index = 1 → desplaza -100% y muestra la segunda.
+            // Si index = 2 → desplaza -200% y muestra la tercera.
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Función que avanza a la siguiente imagen.
+        function nextSlide(){
+
+            // Incrementa el índice en 1.
+            index++;
+
+            // Si se supera la última imagen...
+            if(index >= totalSlides){
+                // ...vuelve al principio del carrusel.
+                index = 0;
+            }
+
+            // Actualiza la imagen mostrada.
+            showSlide();
+        }
+
+        // Función que retrocede a la imagen anterior.
+        function prevSlide(){
+
+            // Reduce el índice en 1.
+            index--;
+
+            // Si se intenta retroceder desde la primera imagen...
+            if(index < 0){
+                // ...salta a la última imagen.s
+                index = totalSlides - 1;
+            }
+            // Actualiza la imagen mostrada.
+            showSlide();
+        }
+
+        // Mueve automáticamente el carrusel cada 6 segundos.
+        setInterval(() => {
+            // Ejecuta la función que avanza a la siguiente imagen.
+            nextSlide();
+        }, 6000); // 6000 milisegundos = 6 segundos
+
+    </script>
+
+</body>
+</html>

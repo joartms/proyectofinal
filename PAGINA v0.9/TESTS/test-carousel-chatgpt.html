@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrusel múltiple</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:left;
+    align-items:top;
+    height:100vh;
+    background: pink;
+    font-family:Arial;
+}
+
+.carousel{
+    width: 100vw;
+    overflow:hidden;
+    position:relative;
+    height: fit-content;
+    padding-left: 25px;
+}
+
+.slides{
+    display:flex;
+    margin:auto;
+    transition:0.5s;
+}
+
+.slide{
+    min-width:165px;
+    min-height: 100px;
+    margin:10px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.slide img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+}
+
+.slide h2{
+    padding:15px;
+    text-align:center;
+}
+
+button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:black;
+    color:white;
+    border:none;
+    padding:10px 7px;
+    cursor:pointer;
+    font-size:20px;
+    z-index:10;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.prev{
+    left:0;
+}
+
+.next{
+    right:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="carousel">
+
+    <button class="prev" onclick="prevSlide()">❮</button>
+
+    <div class="slides" id="slides">
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1015/300/200">
+            <h2>Producto 1</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1016/300/200">
+            <h2>Producto 2</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/300/200">
+            <h2>Producto 3</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1020/300/200">
+            <h2>Producto 4</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 5</h2>
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1015/300/200">
+            <h2>Producto 6</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1016/300/200">
+            <h2>Producto 7</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/300/200">
+            <h2>Producto 8</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1020/300/200">
+            <h2>Producto 9</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 10</h2>
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1015/300/200">
+            <h2>Producto 11</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1016/300/200">
+            <h2>Producto 12</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/300/200">
+            <h2>Producto 13</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1020/300/200">
+            <h2>Producto 14</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 15</h2>
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1015/300/200">
+            <h2>Producto 16</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1016/300/200">
+            <h2>Producto 17</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/300/200">
+            <h2>Producto 18</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1020/300/200">
+            <h2>Producto 19</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 20</h2>
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1018/300/200">
+            <h2>Producto 21</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1020/300/200">
+            <h2>Producto 22</h2>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 23</h2>
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/1024/300/200">
+            <h2>Producto 24</h2>
+        </div>
+
+    </div>
+
+    <button class="next" onclick="nextSlide()">❯</button>
+
+</div>
+
+<script>
+
+const carousel = document.querySelector(".carousel"); // Obtiene el contenedor principal del carrusel (.carousel)
+const slides = document.getElementById("slides"); // Obtiene el contenedor que agrupa todas las tarjetas (.slides)
+
+// Obtiene la primera tarjeta del carrusel
+// Se usa como referencia para calcular el ancho real de una tarjeta
+const slide = document.querySelector(".slide");
+
+// Calcula el ancho total que ocupa una tarjeta:
+// ancho propio + margen izquierdo + margen derecho
+const slideWidth =
+    slide.offsetWidth +
+    parseInt(getComputedStyle(slide).marginLeft) +
+    parseInt(getComputedStyle(slide).marginRight);
+
+// Variable que almacena cuánto se desplazó el carrusel
+// Comienza en 0 porque inicialmente no se movió
+let offset = 0;
+
+// Función que se ejecuta al presionar el botón "Siguiente"
+function nextSlide(){
+
+    // Espacio extra que se quiere dejar al final
+    // para que el último producto no quede pegado al borde
+    const paddingFinal = 60;
+
+    // Calcula el desplazamiento máximo permitido:
+    // ancho total del contenido
+    // menos ancho visible del carrusel
+    // más el espacio extra deseado
+    const maxOffset =
+        slides.scrollWidth - carousel.clientWidth + paddingFinal;
+
+    // Avanza una tarjeta completa
+    offset += slideWidth;
+
+    // Si se pasó del límite máximo,
+    // lo ajusta al máximo permitido
+    if(offset > maxOffset){
+        offset = maxOffset;
+    }
+
+    // Aplica el desplazamiento horizontal
+    // moviendo el contenedor de tarjetas hacia la izquierda
+    slides.style.transform =
+        `translateX(-${offset}px)`;
+}
+
+// Función que se ejecuta al presionar el botón "Anterior"
+function prevSlide(){
+
+    // Retrocede una tarjeta completa
+    offset -= slideWidth;
+
+    // Si intenta retroceder más allá del inicio,
+    // vuelve a 0
+    if(offset < 0){
+        offset = 0;
+    }
+
+     // Aplica el nuevo desplazamiento
+    slides.style.transform =
+        `translateX(-${offset}px)`;
+}
+
+</script>
+
+</body>
+</html>
