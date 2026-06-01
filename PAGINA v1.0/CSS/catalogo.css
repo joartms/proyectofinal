@@ -1,0 +1,123 @@
+/* HEADER */
+
+.header{
+    background-color: var(--cafe);
+}   
+
+.lado-izquierdo{
+    display:flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.buscador{
+    width: 30vw;
+    position: relative;
+    
+}
+
+.lupita{
+    width: 100%;
+    height: 30px;
+    padding: 0 0 0 10px;
+    border-radius: 15px;
+    background-color: var(--espuma);
+    border: none;
+}
+
+.buscador img{
+    position: absolute;
+    width: 20px;
+    right: 0;
+    top: 20%;
+}
+
+/* MAIN */
+
+.contenedor-principal{
+    background-image: url(../IMG/fondo-catalogo.jpg);
+    background-repeat: repeat;
+    background-size:contain;
+    height: 100vh;
+    position: relative;
+    width:100%;
+    background-attachment: fixed;
+}
+
+.black-background{
+    background-color: #fff7e8dd;
+    width:100%;
+    display: flex;
+    height: 100vh;
+}
+
+/* CARRUSEL DE PUBLICIDAD */
+
+.caja-carrusel{
+    position:relative;
+    width:100vw;
+    height: 500px;
+    margin-top: 88px;
+}
+
+.gradiente{
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent,#fff7e811, #fff7e822,#fff7e877, var(--espuma), transparent);
+    width: 100%;
+    height: 50%;
+    z-index: 20;
+}
+
+.carrusel{
+    width:100%;
+    height:90%;
+    position:relative;
+    overflow:hidden;
+}
+
+
+.slides{
+    display:flex;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+
+.slide{
+    min-width:100%;
+    background: linear-gradient(to right, red, blue);
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* BOTONES DEL CARRUSEL */
+
+button{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    background: #34110055;
+    color: var(--espuma);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+button:hover{
+    background-color: #34110088;
+}
