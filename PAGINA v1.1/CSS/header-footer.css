@@ -1,0 +1,107 @@
+:root{
+    --espuma: #fff7e8;
+    --leche: #e8d3b8;
+    --crema: #cfab71;
+    --tostado: #7f5e35;
+    --espresso: #713105;
+    --cafe: #4f351c;
+    --oscuro: #341100;
+    font-family: "Hedvig Letters Serif", Segoe UI;
+}
+
+body, h1, h2, h3, h4, h5, h6, li, a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header{
+    position: absolute;
+    z-index: 10;
+    width:100%;
+    border-bottom: 1px solid var(--crema);
+    box-shadow: 0px 2px 10px 5px #cfab7133;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:  5px 50px;
+    align-items: center;
+}
+
+.lista{
+    display:flex;
+    gap: 90px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.item{
+    color: var(--crema);
+    font-size: 17px;
+    transition: color 0.2s ease;
+}
+.item:hover{
+    color: var(--espuma);
+}
+
+.logo {
+    align-items: center;
+    width: 100px;
+    border-radius: 50%;
+    transition: image ;
+}
+
+/* FOOTER */
+
+footer{
+    height: 220px;
+    background-color: var(--oscuro);
+    color: var(--crema);
+    padding: 60px;
+    letter-spacing: 1.5px;
+}
+
+.columnas{
+    display:flex;
+    justify-content: center;
+    gap:300px;
+    font-size: 17px;
+}
+
+.footer-icon{
+    width:20px;
+    height:20px;
+}
+
+.gmail, .telefono, .instagram{
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.subtitulo-footer{
+    margin-bottom: 20px;
+}
+
+.gmail{
+    margin-bottom: 20px;
+}
+
+.frase-final{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.delicia{
+    font-family: "Instrument Serif", serif;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 25px;
+}
