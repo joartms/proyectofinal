@@ -1,3 +1,8 @@
+/* SCROLL BEHAVIOR */
+html {
+    scroll-behavior: smooth;
+}
+
 /* MAIN */
 
 .contenedor-izquierdo {
@@ -107,21 +112,24 @@
 /* == POPUP == */
 
 #popup {
-    width: 400px;
-    height: 360px;
+    width: 420px;
+    height: auto;
     background: right linear-gradient(transparent, #7f5e35);
-    border-radius: 10px;
+    border-radius: 15px;
     border: 2px solid var(--tostado);
     box-shadow: 0px 0px 60px 0px var(--cafe);
     font-family: "Hedvig Letters Serif", Segoe UI;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: visible;
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    z-index: 9999;
 }
 #popup::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 #popup:not([open]) {
     display: none;
@@ -164,16 +172,18 @@
 .titulo-popup {
     color: var(--espuma);
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
+    padding-bottom: 15px;
     border-bottom: 2px solid var(--tostado);
     letter-spacing: 1px;
+    font-size: 24px;
 }
 
 .contenedor-inicio-sesion {
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 0 20px;
 }
 .contenedor-inputs {
-    padding: 0px 10px;
     padding-top: 20px;
 }
 .label-inicio-sesion {
@@ -216,7 +226,8 @@
 .contenedor-boton-popup {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 30px;
+    padding-bottom: 20px;
 }
 .boton-enviar-popup {
     border: none;
@@ -240,13 +251,12 @@
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    padding: 0 20px 20px 20px;
+    margin: 0;
 }
 #olvidaste {
     color: var(--leche);
     text-decoration: underline;
-}
-#olvidaste:hover {
-    color: var(--espuma);
 }
 
 /* FLECHA ANIMADA BAJAR */

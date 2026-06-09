@@ -27,13 +27,13 @@
     <header>
         <div class="header">
             <div class="nombre">
-                <img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo">
+                <a href="index.php"><img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo"></a>
             </div>
             <nav class="nav">
                 <ul class="lista">
-                    <li><a class="item" href="">Sobre Nosotros</a></li>
-                    <li><a class="item" href="">Productos</a></li>
-                    <li><a class="item" href="">Contacto</a></li>
+                    <li><a class="item" href="index.html#nuestra-historia">Sobre Nosotros</a></li>
+                    <li><a class="item" href="index.html#productos">Productos</a></li>
+                    <li><a class="item" href="index.html#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,36 +49,42 @@
                         <div class="inicio-sesion">
                             <h2 class="titulo">Iniciar Sesión</h2>
                             <h4 class="subtitulo">Para finalizar el proceso, le solicitamos completar algunos campos adicionales.</h4>
-                            <div class="form">
+                            <form class="form" action="../PHP/register.php" method="post">
                                 <div class="dos-inputs">
                                     <div class="input">
-                                        <input type="text" placeholder="Nombre">
+                                        <input type="text" name="nombre" placeholder="Nombre" required>
                                     </div>
                                     <div class="input">
-                                        <input type="text" placeholder="Apellido">
+                                        <input type="text" name="apellido" placeholder="Apellido" required>
                                     </div>
                                 </div>
                                 <div class="input">
-                                    <input type="email" placeholder="Email">
+                                    <input type="email" name="email" placeholder="Email" required>
                                 </div>
                                 <div class="dos-inputs">
                                     <div class="input">
-                                        <input type="text" placeholder="País">
+                                        <input type="text" name="pais" placeholder="País">
                                     </div>
                                     <div class="input">
-                                        <input type="text" placeholder="Ciudad">
+                                        <input type="text" name="ciudad" placeholder="Ciudad">
                                     </div>
                                 </div>
                                 <div class="input">
-                                    <input type="date">
+                                    <input type="date" name="fecha_nacimiento">
                                 </div>
                                 <div class="input">
-                                    <input type="number" placeholder="DNI">
-                            </div>
-                            </div> 
-                            <div class="contenedor-button">
-                                <button class="enviar">🡆</button>
-                            </div>
+                                    <input type="number" name="dni" placeholder="DNI">
+                                </div>
+                                <div class="input">
+                                    <input type="text" name="username" placeholder="Nombre de usuario" required>
+                                </div>
+                                <div class="input">
+                                    <input type="password" name="password" placeholder="Contraseña" required>
+                                </div>
+                                <div class="contenedor-button">
+                                    <button type="submit" class="enviar">🡆</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

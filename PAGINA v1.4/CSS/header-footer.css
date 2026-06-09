@@ -117,3 +117,27 @@ footer{
     letter-spacing: 3px;
     font-size: 25px;
 }
+.usuario-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.usuario-nombre {
+    color: var(--crema);
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.usuario-cerrar {
+    color: var(--espresso);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.usuario-cerrar:hover {
+    color: var(--espuma);
+}
