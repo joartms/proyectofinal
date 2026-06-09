@@ -1,0 +1,146 @@
+:root{
+    --espuma: #fff7e8;
+    --leche: #e8d3b8;
+    --crema: #cfab71;
+    --tostado: #7f5e35;
+    --espresso: #713105;
+    --cafe: #4f351c;
+    --oscuro: #341100;
+    font-family: "Hedvig Letters Serif", Segoe UI;
+}
+
+body, h1, h2, h3, h4, h5, h6, li, a{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header{
+    position: fixed;
+    z-index: 110;
+    width:100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:  5px 100px;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.header.scrolled{
+    background-color: var(--oscuro);
+    box-shadow: 0 0 20px 0 var(--cafe);
+}
+
+
+
+.lista{
+    display:flex;
+    gap: 90px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.item{
+    color: var(--crema);
+    font-size: 17px;
+    transition: color 0.2s ease;
+}
+.item:hover{
+    color: var(--espuma);
+}
+
+.logo{
+    align-items: center;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logo.scrolleado{
+    width: 90px;
+}
+
+.logo:hover {
+    padding: 5px 0px;
+}
+
+.linea-link{
+    width: 0;
+    background-color: var(--espuma);
+    height: 1.5px;
+    margin-top: 4px;
+    transition: width 0.4s ease;
+}
+
+.item-lista:hover .linea-link{
+    width: 100%;
+}
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER */
+
+footer{
+    height: 220px;
+    background-color: var(--oscuro);
+    color: var(--crema);
+    padding: 60px;
+    letter-spacing: 1.5px;
+}
+
+.columnas{
+    display:flex;
+    justify-content: center;
+    gap:300px;
+    font-size: 17px;
+}
+
+.footer-icon{
+    width:20px;
+    height:20px;
+}
+
+.gmail, .telefono, .instagram{
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.subtitulo-footer{
+    margin-bottom: 20px;
+}
+
+.gmail{
+    margin-bottom: 20px;
+}
+
+.frase-final{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.delicia{
+    font-family: "Instrument Serif", serif;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 25px;
+}
