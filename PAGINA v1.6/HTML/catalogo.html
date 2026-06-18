@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia</title>
+
+    <!-- STYLES -->
+
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+    <link rel="stylesheet" href="../CSS/catalogo.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="png" href="../IMG/favicon.png">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- HEADER -->
+
+    <header>
+        <div class="header">
+            <div class="lado-izquierdo">
+                <div class="nombre">
+                    <img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo">
+                </div>
+                <div class="buscador">
+                    <input type="text" class="lupita" placeholder="Búsqueda...">
+                    <img src="../IMG/lupita-icon.png" alt="">
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="lista">
+                    <li class="item-lista">
+                        <a class="item" href="">Sobre Nosotros</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" href="">Productos</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" href="">Contacto</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li><a class="item" href="">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="black-background">
+
+                <!-- CARRUSEL DE PUBLICIDAD -->
+
+                <section class="caja-carrusel">
+                    <div class="carrusel">
+                        <div class="slides" id="slides">
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-1.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-2.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-3.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-4.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-5.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../IMG/inicio-catalogo-carrusel/carrusel-inicio-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <button class="anterior-publicidad button-publicidad" onclick="anteriorSlide()">❮</button>
+                        <button class="siguiente-publicidad button-publicidad" onclick="siguienteSlide()">❯</button>
+                        <div class="gradiente-color"></div>
+                    </div>
+                    <div class="gradiente"></div>  
+
+                    <!-- SCRIPT CARRUSEL -->
+                    
+                    <script src="../JS/carrusel-catalogo-inicio.js"></script>
+
+                    <!-- FILTROS DE BÚSQUEDA INICIO -->
+                    
+                    <section class="filtros-busqueda">
+                        <div class="filtros">
+                            <div class="filtro">
+                                <img class="filtro-icono" src="../IMG/iconos-catalogo-filtros/menos-cinco-mil.png" alt="">
+                                <h3 class="subtitulo-filtro">Menos de $5000</h3>
+                            </div>
+                            <div class="filtro">
+                                <img class="filtro-icono" src="../IMG/iconos-catalogo-filtros/ofertas.png" alt="">
+                                <h3 class="subtitulo-filtro">Ofertas Imperdibles</h3>
+                            </div>
+                            <div class="filtro">
+                                <img class="filtro-icono" src="../IMG/iconos-catalogo-filtros/saludables.png" alt="">
+                                <h3 class="subtitulo-filtro">Productos Saludables</h3>
+                            </div>
+                            <div class="filtro">
+                                <img class="filtro-icono" src="../IMG/iconos-catalogo-filtros/medialuna.png" alt="">
+                                <h3 class="subtitulo-filtro">Productos Dulces</h3>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- CATÁLOGO -->
+
+                <section class="catalogo">
+
+                    <div class="categoria-1">
+                        <h3 class="titulo-categorias">Top Vendidos</h3>
+                        <div class="carrusel-catalogo">
+                            <div class="slides-catalogo" id="slides-catalogo">
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo3.jpg">
+                                    </div>
+                                    <h2>Producto 1</h2>
+                                    
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo25.jpg">
+                                    </div>
+                                    <h2>Producto 2</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo5.jpg">
+                                    </div>
+                                    <h2>Producto 3</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo6.jpg">
+                                    </div>
+                                    <h2>Producto 4</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo7.jpg">
+                                    </div>
+                                    <h2>Producto 5</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo8.jpg">
+                                    </div>
+                                    <h2>Producto 6</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo9.jpg">
+                                    </div>
+                                    <h2>Producto 7</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo10.jpg">
+                                    </div>
+                                    <h2>Producto 8</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo11.jpg">
+                                    </div>
+                                    <h2>Producto 9</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo12.jpg">
+                                    </div>
+                                    <h2>Producto 10</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo13.jpg">
+                                    </div>
+                                    <h2>Producto 11</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo14.jpg">
+                                    </div>
+                                    <h2>Producto 12</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo15.jpg">
+                                    </div>
+                                    <h2>Producto 13</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo16.jpg">
+                                    </div>
+                                    <h2>Producto 14</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo17.jpg">
+                                    </div>
+                                    <h2>Producto 15</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo18.jpg">
+                                    </div>
+                                    <h2>Producto 16</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo19.jpg">
+                                    </div>
+                                    <h2>Producto 17</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo20.jpg">
+                                    </div>
+                                    <h2>Producto 18</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo21.jpg">
+                                    </div>
+                                    <h2>Producto 19</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo22.jpg">
+                                    </div>
+                                    <h2>Producto 20</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo23.jpg">
+                                    </div>
+                                    <h2>Producto 21</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo24.jpg">
+                                    </div>
+                                    <h2>Producto 22</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo25.jpg">
+                                    </div>
+                                    <h2>Producto 23</h2>
+                                </div>
+                                <div class="slide-catalogo">
+                                    <div class="contenedor-img">
+                                        <img src="../IMG/fondos/fondo3.jpg">
+                                    </div>
+                                    <h2>Producto 24</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="button-categoria anterior" onclick="antSlide()">❮</button>
+                        <button class="button-categoria siguiente" onclick="sigSlide()">❯</button>
+
+                        <script src="../JS/carrusel-catalogo-categorias.js"></script>
+
+                    </div>
+                    <div class="categoria-2">
+                        <h3 class="titulo-categorias">Categoría 2</h3>
+                    </div>
+                    <div class="categoria-3">
+                        <h3 class="titulo-categorias">Categoría 3</h3>
+                    </div>
+                    <div class="categoria-4">
+                        <h3 class="titulo-categorias">Categoría 4</h3>
+                    </div>
+                    <div class="categoria-5">
+                        <h3 class="titulo-categorias">Categoría 5</h3>
+                    </div> 
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="columnas">
+            <div>
+                <h4 class="subtitulo-footer">Contacto</h4>
+                <div class="gmail">
+                    <img class="footer-icon" src="../IMG/gmail-icon.png" alt="icono de gmail">
+                    <div>
+                        <h5>Gmail:</h5>
+                        <h6>email@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="telefono">
+                    <img class="footer-icon" src="../IMG/telefono-icon.png" alt="icono de telefono">
+                    <div>
+                        <h5>Teléfono:</h5>
+                        <h6>+5493364010101</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="subtitulo-footer">Síguenos en<br>nuestras redes!</h4>
+                <div class="instagram">
+                    <img class="footer-icon" src="../IMG/instagram-icon.png" alt="icono de instagram">
+                    <div>
+                        <h5>Instagram:</h5>
+                        <h6>instagram.user</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frase-final">
+            <div>
+                <h4 class="delicia">Delicia</h4>
+                <h5>Gente que hornea contenta.</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
