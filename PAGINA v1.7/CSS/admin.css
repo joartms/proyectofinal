@@ -1,0 +1,123 @@
+:root{
+    --espuma: #fff7e8;
+    --leche: #e8d3b8;
+    --crema: #cfab71;
+    --tostado: #7f5e35;
+    --espresso: #713105;
+    --cafe: #4f351c;
+    --oscuro: #341100;
+    font-family: "Hedvig Letters Serif", Segoe UI;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: var(--oscuro);
+    height: fit-content;
+    width: 100%;
+}
+
+.header{
+    height: 12%;
+    border: 2px solid var(--leche);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    color: var(--leche);
+}
+
+.boton-desplegable{
+    font-size: 50px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--leche);
+    cursor: pointer;
+}
+
+.seccion-principal{
+    display: flex;
+    height : calc(100vh - 13%);
+}
+
+.barra-lateral{
+    height: auto;
+    background: linear-gradient(var(--espresso), var(--oscuro));
+    width: 300px;
+    border: 2px solid var(--leche);
+}
+
+.opcion{
+    padding: 5px;
+    color: var(--leche);
+    font-size: 20px;
+    margin: 20px 10px;
+    background-color: var(--oscuro);
+    border-radius: 5px;
+}
+
+.contenedor-principal{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 300px);
+    padding: 100px 20px 0 20px;
+    flex-direction: column;
+    padding-bottom: 100px
+}
+
+.imagen-titulo{
+    background-image: url(../IMG/fondos/fondo22.jpg);
+    background-position: center;
+    height: 200px;
+    width: 90%;
+    position: relative;
+}
+
+.gradiente-titulo{
+    position: absolute;
+    background-color: var(--oscuro);
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.titulo-seccion{
+    position: absolute;
+    z-index: 10;
+    color: var(--leche);
+    bottom: 40px;
+    left: 40px;
+    font-size: 40px;
+}
+
+.lista-elementos{
+    width: 90%;
+    background-color: var(--espresso);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elemento{
+    background-color: var(--oscuro);
+    margin: 20px 0;
+    height: 50px;
+    list-style: none;
+    width: 90%;
+    border-radius: 20px;
+    color: var(--leche);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+}
