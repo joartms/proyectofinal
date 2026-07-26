@@ -1,0 +1,214 @@
+:root{
+    --espuma: #fff7e8;
+    --leche: #e8d3b8;
+    --crema: #cfab71;
+    --tostado: #7f5e35;
+    --espresso: #713105;
+    --cafe: #4f351c;
+    --oscuro: #341100;
+    font-family: "Hedvig Letters Serif", Segoe UI;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: var(--oscuro);
+    height: fit-content;
+    width: 100%;
+}
+
+.header{
+    border-bottom: 2px solid var(--leche);
+    box-shadow: 2px 2px 10px 5px var(--espresso);
+    background-color: var(--oscuro);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    color: var(--leche);
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+}
+
+
+.contenedor-header{
+    height: 40px;
+    width: 100%;
+}
+
+.boton-desplegable{
+    font-size: 50px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: var(--leche);
+    cursor: pointer;
+}
+
+.seccion-principal{
+    display: flex;
+    height : calc(100vh - 13%);
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor-barra-lateral{
+    height: 100%;
+    width: 300px;
+    display: none;
+}
+
+.barra-lateral{
+    height: 100%;
+    background: linear-gradient(var(--espresso), var(--oscuro));
+    width: 300px;
+    display:none;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    position: fixed;
+    left: 0;
+    z-index: 20;
+    top: 60px;
+}
+
+.contenedor-opciones{
+    background-color: var(--oscuro);
+    padding: 5px 10px;
+    color: var(--leche);
+    font-size: 20px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.opcion{
+    background-color: var(--oscuro);
+    border: none;
+    color: var(--leche);
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-subopciones-productos{
+    display:none;
+    flex-direction: column;
+}
+
+.contenedor-subopciones-pedidos{
+    display:none;
+    flex-direction: column;
+}
+
+.contenedor-subopciones-comentarios{
+    display:none;
+    flex-direction: column;
+}
+
+.subopcion{
+    margin: 5px 20px;
+    color: var(--leche);
+    font-size: 15px;
+    border: none;
+    width: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contenedor-principal{
+    width: calc(100%-300px);
+    background-color: var(--oscuro);
+    height: auto;
+}
+
+.seccion-opcion{
+    display: flex;
+    align-items: center;
+    padding: 100px 20px 0 20px;
+    flex-direction: column;
+    padding-bottom: 100px;
+    width: 1000px;
+}
+
+.imagen-titulo{
+    background-image: url(../IMG/fondos/fondo22.jpg);
+    background-position: center;
+    height: 200px;
+    width: 90%;
+    position: relative;
+}
+
+.gradiente-titulo{
+    position: absolute;
+    background-color: var(--oscuro);
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.titulo-seccion{
+    position: absolute;
+    z-index: 10;
+    color: var(--leche);
+    bottom: 40px;
+    left: 40px;
+    font-size: 40px;
+}
+
+.lista-elementos{
+    width: 90%;
+    background-color: var(--espresso);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elemento{
+    background-color: var(--oscuro);
+    margin: 20px 0;
+    height: 50px;
+    list-style: none;
+    width: 90%;
+    border-radius: 20px;
+    color: var(--leche);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.seccion-opcion-producto-pendiente{
+    display:flex;
+}
+.seccion-opcion-producto-aprobado{
+    display:flex;
+}
+.seccion-opcion-pedido-pendiente{
+    display:none;
+}
+.seccion-opcion-pedido-completado{
+    display:none;
+}
+.seccion-opcion-cliente{
+    display:none;
+}
+.seccion-opcion-vendedor{
+    display:none;
+}
+.seccion-opcion-comentarios-revisar{
+    display:none;
+}
+.seccion-opcion-comentarios-publicados{
+    display:none;
+}

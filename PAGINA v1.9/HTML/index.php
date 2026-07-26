@@ -1,0 +1,359 @@
+<?php
+session_start();
+$usuario_logueado = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia</title>
+
+    <!-- STYLES -->
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="png" href="../IMG/favicon.png">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- HEADER - LOGO + BARRA DE NAVEGACION -->
+
+    <header id="header">
+        <div class="header">
+            <div class="nombre">
+                <a href="index.php"><img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="lista">
+                    <li><a class="item" href="index.php#nuestra-historia">Sobre Nosotros</a></li>
+                    <li><a class="item" href="index.php#productos">Productos</a></li>
+                    <li><a class="item" href="index.php#contacto">Contacto</a></li>
+                    <li><a class="item" href="catalogo.php">Catálogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="../JS/header-scroll.js"></script>
+
+    <!-- MAIN - INICIO SESION / IMPOSIBLE COMER SOLO UNO -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="black-background">
+                <div class="contenedor-izquierdo">
+                    <div class="cont-izquierdo-2">
+                        <h2 class="subtitulo">Imposible <br> comer solo uno.</h2>
+                        <p class="parra">Bienvenidos a Delicia, donde la panificación y la repostería artesanal crean sabores únicos. Elaboramos panes, tortas y postres con calidad, dedicación y pasión para endulzar cada momento.</p>
+                    </div>
+                </div>
+                <div class="contenedor-derecho">
+                    <div class="etiqueta-inicio-sesion">
+                        <?php if ($usuario_logueado): ?>
+                            <div style="text-align: center; color: white;">
+                                <p style="margin: 0; font-size: 14px;">Bienvenido</p>
+                                <p style="margin: 5px 0; font-weight: bold; font-size: 16px;"><?php echo htmlspecialchars($usuario_logueado); ?></p>
+                                <a href="../PHP/logout.php" style="font-size: 12px; color: #ff9500; text-decoration: none;">Cerrar sesión</a>
+                            </div>
+                        <?php else: ?>
+                            <button class="inicio-sesion-boton" id="inicio-sesion-popup">
+                                <img class="icono-usuario" src="../IMG/etiqueta-usuario-icono.png" alt="Icono de usuario">
+                            </button>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-flecha-bajar" id="contenedor-flecha-bajar">
+                <img class="flecha-bajar" src="../IMG/flecha-abajo.gif" alt="">
+            </div>
+        </div>
+    </main>
+    <script src="../JS/bajar.js"></script>
+
+
+    <!-- POP-UP LOGIN -->
+    <?php if (!$usuario_logueado): ?>
+    <dialog id="popup">
+        <img class="avatar-popup" src="../IMG/usuario-popup-disfraz.png" alt="">
+        <div class="contenedor-cerrar-popup">
+            <button class="cerrar-popup-boton" id="cerrar-popup-boton">
+                <img class="cerrar-popup-img" src="../IMG/cerrar.png" alt="Cerrar">
+            </button>
+        </div>
+
+        <h2 class="titulo-popup">Iniciar Sesión</h2>
+
+        <form class="contenedor-inicio-sesion" action="../PHP/login.php" method="post">
+            <div class="contenedor-inputs">
+                <label class="label-inicio-sesion" for="celda">Nombre de Usuario</label><br>
+                <div class="img-input">
+                    <img class="logo-input-img" src="../IMG/usuario-popup.png" alt="">
+                    <input type="text" name="username" class="inputs" placeholder="Ingrese el nombre de su usuario..." required>
+                </div>
+            </div>
+
+            <div class="contenedor-inputs">
+                <label class="label-inicio-sesion" for="celda">Contraseña</label><br>
+                <div class="img-input">
+                    <img class="logo-input-img" src="../IMG/candado.png" alt="">
+                    <input type="password" name="password" class="inputs" placeholder="Introduzca su contraseña..." required>
+                </div>
+            </div>
+
+            <div class="contenedor-boton-popup">
+                <button type="submit" class="boton-enviar-popup">Enviar</button>
+            </div>
+        </form>
+        <p class="olvidaste">¿No tenés cuenta?  <a href="../HTML/inicio-sesion.html" id="olvidaste">Crea una acá</a></p>
+    </dialog>
+    <script src="../JS/popup.js"></script>
+    <?php endif; ?>
+
+    <section class="contenedor-semiprincipal">
+        <div class="dark-background">
+
+
+            <!-- SECTION - MIRA NUESTROS PRODUCTOS -->
+
+            <section id="productos" class="seccion-carrusel">
+                <h1 class="titulo-seccion-carrusel">Productos seleccionados</h1> 
+
+                <!-- CARRUSEL -->
+                <div class="carrusel">
+
+                    <!-- BOTON IZQUIERDO -->
+                    <div class="contenedor-boton-izquierdo">
+                        <button class="boton-izquierdo">❮</button>
+                    </div>
+
+                    <!--CONTENEDOR CENTRAL -->
+                    <div class="contenedor-central">
+                        <div class="contenedor-productos">
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo3.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 1</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo7.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 2</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo5.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 3</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo8.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 4</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo9.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 5</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                            <div class="producto">
+                                <div class="contenedor-img-carrusel">
+                                    <img class="producto-img" src="../IMG/fondos/fondo10.jpg" alt="">
+                                </div>
+                                <h3 class="producto-h3">PRODUCTO 6</h3>
+                                <p class="producto-p">Esta es una breve descripcion del producto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTON DERECHO -->
+                    <div class="contenedor-boton-derecho">
+                        <button class="boton-derecho">❯</button>
+                    </div>
+
+                </div>
+                <script src="../JS/carrusel-1.js"></script>
+            </section>
+
+            <!-- NUESTRA HISTORIA -->
+
+            <section id="nuestra-historia" class="nuestra-historia">
+                <div class="contenedor-mirar">
+                    <div class="contenedor-mirar-izquierdo">
+                        <div class="imagen-mirar-izquierdo">
+                            <video class="imagen-izquierda" src="../IMG/fondos/video-nuestra-historia.mp4" type="video/mp4" autoplay muted></video>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-mirar-derecho">
+                        <h1 class="nuestra-historia-h1">Nuestra historia</h1>
+                        <p class="nuestra-historia-p">La idea de sustentar nuestros propios gastos, fue el inicio. Todo empezó, para no generar una dependencia a la disponibilidad de dinero por parte de nuestros adultos y tutores, lo que provocó el surgimiento de la idea de crear un ingreso a nuestros bolsillos mediante la venta de productos panificados caseros, resultando en un proyecto escolar (?.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEPARACION - ENVIOS GRATIS -->
+
+            <div class="separacion">
+                <div class="mild-dark-background">
+                    <div class="separacion-texto">
+                        <h3 class="subtitulo-separacion">¡Envíos gratis a toda la ciudad</h3>
+                        <h5 class="texto-pequeno-separacion">al comprar la memebresía!</h5>
+                        <img src="../IMG/fondos/envio-gratis-icono.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSTS DE INSTAGRAM -->
+
+            <section class="post-instagram">
+                <h2 class="titulo-post-instagram">Visitá nuestras redes sociales!</h2>
+                
+                <div class="posts-grid">
+                    <div class="post-grid-item">
+                        <a href="">
+                            <h3 class="texto-post">Ir a Instagram</h3>
+                            <img src="../IMG/fondos/flecha-post.png" alt="" class="icono-flecha-post">
+                            <img src="../IMG/fondos/fondo20.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                    <div class="post-grid-item">
+                        <a href="">
+                            <img src="../IMG/fondos/fondo21.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                    <div class="post-grid-item">
+                        <a href="">
+                            <img src="../IMG/fondos/fondo22.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                    <div class="post-grid-item">
+                        <a href="">
+                            <img src="../IMG/fondos/fondo23.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                    <div class="post-grid-item">
+                        <a href="">
+                            <img src="../IMG/fondos/fondo24.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                    <div class="post-grid-item">
+                        <a href="">
+                            <img src="../IMG/fondos/fondo25.jpg" alt="" class="grid-item-img">
+                            <div class="gradiente-grid-item"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+    
+
+    <!-- CARRUSEL NO INTERACTIVO -->
+
+    <div class="carrusel-no-interactivo">
+
+        <div class="contenedor-central-no-interactivo">
+            <div class="contenedor-fotos" id="contenedor-fotos">
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo11.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo12.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo13.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo14.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo15.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo16.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo17.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo18.jpg" alt="">
+                </div>
+                <div class="foto-n">
+                    <img class="foto" src="../IMG/fondos/fondo19.jpg" alt="">
+                </div>
+            </div>
+        </div>                   
+
+    </div>
+    <script src="../JS/carrusel-2.js"></script>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contacto">
+        <div class="columnas">
+            <div>
+                <h4 class="subtitulo-footer">Contacto</h4>
+                <div class="gmail">
+                    <img class="footer-icon" src="../IMG/gmail-icon.png" alt="icono de gmail">
+                    <div>
+                        <h5>Gmail:</h5>
+                        <h6>email@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="telefono">
+                    <img class="footer-icon" src="../IMG/telefono-icon.png" alt="icono de telefono">
+                    <div>
+                        <h5>Teléfono:</h5>
+                        <h6>+5493364010101</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="subtitulo-footer">Seguinos en<br>nuestras redes!</h4>
+                <div class="instagram">
+                    <img class="footer-icon" src="../IMG/instagram-icon.png" alt="icono de instagram">
+                    <div>
+                        <h5>Instagram:</h5>
+                        <h6>instagram.user</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frase-final">
+            <div>
+                <h4 class="delicia">Delicia</h4>
+                <h5>Gente que hornea contenta.</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

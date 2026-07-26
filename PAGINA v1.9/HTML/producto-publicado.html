@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia</title>
+
+    <!-- STYLES -->
+
+    <link rel="stylesheet" href="../CSS/producto-publicado.css">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="png" href="../IMG/favicon.png">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- HEADER - LOGO + BARRA DE NAVEGACION -->
+
+    <header id="header">
+        <div class="header">
+            <div class="nombre">
+                <a href="index.html"><img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="lista">
+                    <li class="item-lista">
+                        <a class="item" id="sobrenosotros">Sobre Nosotros</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" id="productos">Productos</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" id="contactos">Contacto</a>
+                        <div class="linea-link"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="../JS/header-scroll.js"></script>
+
+    <!-- MAIN -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="black-background">
+
+                <div class="contenedor-general">
+
+                    <div class="contenedor-producto-venta">
+
+                        <!-- VISTA PREVIA DEL PRODUCTO -->
+                        <div class="lado-izquierdo">
+                            <div class="img-carrusel">
+                                <button class="button-subir"><img src="../IMG/fondos/fondo20.jpg" alt="" class="img-subir"></button>
+                            </div>
+                            <!-- CARRUSEL INFERIOR -->
+                            <div class="carrusel-inferior">
+                                <button class="boton"><</button>
+                                <img src="../IMG/etiqueta-usuario-icono.png" alt="">
+                                <button class="boton">></button>
+                            </div>
+                        </div>
+                    
+                        <div class="lado-derecho">
+                            <fieldset>
+                                <legend><h1 class="titulo-producto">Pan de Masa Madre</h1></legend>
+                                <div class="contenedor-estrellas">
+                                    <button class="button-estrella"><img src="../IMG/estrellas.png" alt="" class="img-estrella"></button>
+                                    <button class="button-estrella"><img src="../IMG/estrellas.png" alt="" class="img-estrella"></button>
+                                    <button class="button-estrella"><img src="../IMG/estrellas.png" alt="" class="img-estrella"></button>
+                                    <button class="button-estrella"><img src="../IMG/estrellas.png" alt="" class="img-estrella"></button>
+                                    <button class="button-estrella"><img src="../IMG/estrellas.png" alt="" class="img-estrella"></button>
+                                </div>
+
+                                <div class="precios">
+                                    <h1>$8000</h1><h3>C/U</h3>
+                                </div>
+                                
+                                <button class="button-comprar" id="button-comprar">Comprar ahora</button>
+                                <button class="button-carrito" id="button-carrito">Añadir al carrito</button>
+
+                                <p>Este espacio será dedicado a las etiquetas respecto al producto. Aparecen con su forma y nombre.</p>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <!-- ACÁ IRÍA EL RESTO DEL CONTENIDO DE LA FORMULA DE LA PUBLICACION DE PRODUCTO POR PASOS-->
+
+                    <!-- DESCRIPCION -->
+                    <div class="seccion-descripcion">
+                        <img src="../IMG/fondos/fondo3.jpg" alt="" class="img-principal">
+                        <div class="descripcion-seccion-descripcion">
+                            <h1 class="titulo-seccion-descripcion">Descripción del producto</h1>
+                            <p class="texto-seccion-descripcion">Elaborado mediante un proceso de fermentación natural con masa madre, este pan se distingue por su corteza dorada y crujiente, una miga suave y aireada, y un sabor ligeramente ácido que realza cada bocado. Su fermentación lenta no solo potencia su aroma y textura, sino que también favorece una mejor conservación y digestibilidad. Ideal para acompañar desayunos, meriendas o cualquier comida con el auténtico sabor de la panadería artesanal.</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- COMENTAR -->
+                    <div class="seccion-comentar">
+                        <h2 class="h2-comentar">¡Agregá un comentario!</h2>
+
+                        <div class="opciones-escritura">
+                            <button class="opcion" id="N">N</button>
+                            <button class="opcion" id="K">K</button>
+                            <button class="opcion" id="U">U</button>
+                        </div>
+
+                        <div class="contenedor-comentar">
+                            <textarea class="textarea" placeholder="Escribí tu comentario acá..."></textarea>
+                        </div>
+
+                        <button class="button-publicar">Publicar</button>
+                        
+                    </div>
+
+
+                    <!-- COMENTARIOS -->
+                    <div class="seccion-comentarios">
+                        <h2 class="h2-comentario">Comentarios</h2>
+
+                        <div class="comentario">
+                            <img src="../IMG/etiqueta-usuario-icono.png" alt="" class="comentario-img">
+                            <p class="comentario-h">De: USUARIO.</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="../JS/publicacion-pasos.js"></script>
+        <script src="../JS/paso-1.js"></script>
+    </main>
+    
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="columnas">
+            <div>
+                <h4 class="subtitulo-footer">Contacto</h4>
+                <div class="gmail">
+                    <img class="footer-icon" src="../IMG/gmail-icon.png" alt="icono de gmail">
+                    <div>
+                        <h5>Gmail:</h5>
+                        <h6>email@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="telefono">
+                    <img class="footer-icon" src="../IMG/telefono-icon.png" alt="icono de telefono">
+                    <div>
+                        <h5>Teléfono:</h5>
+                        <h6>+5493364010101</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="subtitulo-footer">Seguinos en<br>nuestras redes!</h4>
+                <div class="instagram">
+                    <img class="footer-icon" src="../IMG/instagram-icon.png" alt="icono de instagram">
+                    <div>
+                        <h5>Instagram:</h5>
+                        <h6>delicia.snba</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frase-final">
+            <div>
+                <h4 class="delicia">Delicia</h4>
+                <h5>Gente que hornea contenta.</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
