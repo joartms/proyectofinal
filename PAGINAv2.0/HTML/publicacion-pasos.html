@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicia</title>
+
+    <!-- STYLES -->
+
+    <link rel="stylesheet" href="../CSS/publicacion-pasos.css?v=2">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" type="png" href="../IMG/favicon.png">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- HEADER - LOGO + BARRA DE NAVEGACION -->
+
+    <header id="header">
+        <div class="header">
+            <div class="nombre">
+                <a href="index.html"><img class="logo" src="../IMG/logo_sin_espacio_alrededor.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul class="lista">
+                    <li class="item-lista">
+                        <a class="item" id="sobrenosotros">Sobre Nosotros</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" id="productos">Productos</a>
+                        <div class="linea-link"></div>
+                    </li>
+                    <li class="item-lista">
+                        <a class="item" id="contactos">Contacto</a>
+                        <div class="linea-link"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="../JS/header-scroll.js"></script>
+
+    <!-- MAIN -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="black-background">
+
+                <div class="contenedor-general">
+
+                    <div class="contenedor-producto-venta">
+
+                        <!-- VISTA PREVIA DEL PRODUCTO -->
+                        <div class="lado-izquierdo">
+                            <div class="img-carrusel">
+                                <input type="file" id="input-imagen-producto" accept="image/*" multiple style="display:none;">
+                                <button type="button" class="button-subir" id="boton-subir-imagen">
+                                    <img src="../IMG/subir.png" alt="" class="img-subir">
+                                </button>
+                                <h2 class="h5-subir">Subí las imágenes</h2>
+                                <p id="estado-subida" style="margin-top:10px; color:#fff; font-size:14px;"></p>
+                                <img id="preview-imagen-producto" src="" alt="Vista previa" style="display:none; max-width:100%; margin-top:10px; border-radius:10px;">
+                                <div id="miniaturas-imagenes-producto" class="miniaturas-imagenes-producto"></div>
+                            </div>
+                            <!-- CARRUSEL INFERIOR -->
+                            <div class="carrusel-inferior">
+                                <button class="boton"><</button>
+                                <img class="img-carrusel-inferior" src="../IMG/etiqueta-usuario-icono.png" alt="">
+                                <button class="boton">></button>
+                            </div>
+                        </div>
+                    
+                        <div class="lado-derecho">
+                            <fieldset>
+                                <legend class="subtitulos-lado-derecho">Ingrese el nombre del producto:</legend>
+                                <input type="text" id="nombre-producto" placeholder="Titulo del producto a vender" class="titulo-producto" required>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend class="subtitulos-lado-derecho">Seleccione la unidad de medida que determinará el precio:</legend>
+                                <div class="opcion-peso-unidad">
+                                    <button class="boton-peso boton-precio-activo" onclick="mostrarPrecioPeso()">Por peso</button>
+                                    <button class="boton-unidad" onclick="mostrarPrecioUnidad()">Por unidad</button>
+                                </div>
+
+                                <div class="contenedor-precio-peso">
+                                    <h2 class="signo-peso">$</h2>
+                                    <input type="number" id="precio-producto" class="input-precio" min="0" step="0.01" required>
+                                    <h3 class="unidad-de-medida">x 100gr</h3>
+                                </div>
+
+                                <div class="contenedor-precio-unidad">
+                                    <h2 class="signo-peso">$</h2>
+                                    <input type="number" id="precio-producto-unidad" class="input-precio" min="0" step="0.01">
+                                    <h3 class="unidad-de-medida">C/U</h3>
+                                </div>
+                            
+                                <script src="../JS/boton-input-precio.js"></script>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend class="subtitulos-lado-derecho">Seleccione las etiquetas correspondientes a su producto:</legend>
+                                <p>Elegí al menos dos etiquetas.</p>
+                                <div id="etiquetas-producto" class="etiquetas-producto">
+                                    <strong>Tipo / sabor</strong>
+                                    <label><input type="checkbox" name="etiquetas" value="Dulce"> Dulce</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Salado"> Salado</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Agridulce"> Agridulce</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Relleno"> Relleno</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Sin relleno"> Sin relleno</label>
+                                    <strong>Tipo de producto</strong>
+                                    <label><input type="checkbox" name="etiquetas" value="Panificados"> Panificados</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Facturas"> Facturas</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Tortas"> Tortas</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Budines"> Budines</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Galletitas"> Galletitas</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Medialunas"> Medialunas</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Pastelería"> Pastelería</label>
+                                    <strong>Características</strong>
+                                    <label><input type="checkbox" name="etiquetas" value="Integral"> Integral</label>
+                                    <label><input type="checkbox" name="etiquetas" value="Sin azúcar"> Sin azúcar</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <!-- ACÁ IRÍA EL RESTO DEL CONTENIDO DE LA FORMULA DE LA PUBLICACION DE PRODUCTO POR PASOS-->
+
+                    <!-- DESCRIPCION -->
+                    <div class="seccion-descripcion">
+                        <img src="../IMG/fondos/fondo20.jpg" alt="" class="img-principal">
+                        <div class="descripcion-seccion-descripcion">
+                            <h1 class="titulo-seccion-descripcion">Descripción del producto</h1>
+                            <textarea id="descripcion-producto" class="texto-seccion-descripcion" placeholder="Ingrese la descripción del producto y detalles adicionales." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-boton-publicar">
+                        <button class="button-publicar" id="btn-publicar-producto">Publicar Producto</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="../JS/publicacion-pasos.js"></script>
+        <script src="../JS/paso-1.js"></script>
+        <script src="../JS/publicar-producto.js"></script>
+        <script src="../JS/subir-imagenes.js"></script>
+    </main>
+    <button id="btn-cerrar-sesion" style="position:fixed; right:20px; bottom:20px; z-index:9999; padding:12px 16px; border:none; border-radius:999px; background:#8b5e3c; color:#fff; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.25);">Cerrar sesión</button>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/cerrar-sesion.js"></script>
+    
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="columnas">
+            <div>
+                <h4 class="subtitulo-footer">Contacto</h4>
+                <div class="gmail">
+                    <img class="footer-icon" src="../IMG/gmail-icon.png" alt="icono de gmail">
+                    <div>
+                        <h5>Gmail:</h5>
+                        <h6>email@gmail.com</h6>
+                    </div>
+                </div>
+                <div class="telefono">
+                    <img class="footer-icon" src="../IMG/telefono-icon.png" alt="icono de telefono">
+                    <div>
+                        <h5>Teléfono:</h5>
+                        <h6>+5493364010101</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4 class="subtitulo-footer">Seguinos en<br>nuestras redes!</h4>
+                <div class="instagram">
+                    <img class="footer-icon" src="../IMG/instagram-icon.png" alt="icono de instagram">
+                    <div>
+                        <h5>Instagram:</h5>
+                        <h6>delicia.snba</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frase-final">
+            <div>
+                <h4 class="delicia">Delicia</h4>
+                <h5>Gente que hornea contenta.</h5>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
